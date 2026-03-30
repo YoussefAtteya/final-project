@@ -1,0 +1,165 @@
+.account-page {
+  background: #f4f6f3;
+  min-height: 100vh;
+}
+
+.account-card {
+  background: #fff;
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+  border: 1px solid #eef0f3;
+}
+
+.account-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.account-avatar {
+  width: 68px;
+  height: 68px;
+  border-radius: 20px;
+  background: #ff6a00;
+  color: #111;
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.account-title {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #172033;
+}
+
+.account-sub {
+  margin: 4px 0 0;
+  color: #6b7280;
+}
+
+.account-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.account-info-item {
+  border: 1px solid #edf0f3;
+  border-radius: 18px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.account-info-item span {
+  color: #6b7280;
+  font-size: 0.92rem;
+}
+
+.account-info-item strong {
+  color: #172033;
+  font-size: 1rem;
+}
+
+.account-section-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #172033;
+}
+
+.account-empty {
+  text-align: center;
+  padding: 32px 12px;
+}
+
+.account-orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.account-order-card {
+  border: 1px solid #edf0f3;
+  border-radius: 20px;
+  padding: 18px;
+  background: #fcfcfd;
+}
+
+.account-order-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.account-order-id {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #172033;
+}
+
+.account-order-date {
+  color: #6b7280;
+  font-size: 0.92rem;
+  margin-top: 4px;
+}
+
+.account-order-meta {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.account-order-meta div {
+  border-radius: 16px;
+  background: #fff;
+  border: 1px solid #edf0f3;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.account-order-meta span {
+  color: #6b7280;
+  font-size: 0.88rem;
+}
+
+.account-order-meta strong {
+  color: #172033;
+  font-size: 1rem;
+}
+
+@media (max-width: 767px) {
+  .account-card {
+    border-radius: 20px;
+    padding: 18px;
+  }
+
+  .account-title {
+    font-size: 1.7rem;
+  }
+
+  .account-order-meta {
+    grid-template-columns: 1fr;
+  }
+}
+
+.account-order-items {
+  border-top: 1px solid #edf0f3;
+  padding-top: 14px;
+}
+
+.account-order-item-row {
+  background: #fff;
+  border: 1px solid #edf0f3;
+  border-radius: 14px;
+  padding: 10px 12px;
+}
