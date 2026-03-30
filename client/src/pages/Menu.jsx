@@ -4,7 +4,7 @@ import { getCategories, getDishes } from '../services/api';
 import DishModal from '../components/DishModal';
 import { useCart } from '../context/CartContext';
 
-const API_BASE = 'http://localhost:5000';
+const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:5000';
 
 export default function Menu() {
   const [cats, setCats] = useState([]);

@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 
-const API_BASE = 'http://localhost:5000';
+const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:5000';
 
 export default function Home() {
   const [settings, setSettings] = useState(null);
@@ -12,13 +12,13 @@ export default function Home() {
   useEffect(() => {
     let mounted = true;
 
-    fetch('http://localhost:5000/api/settings')
+    fetch(`${API_BASE}/api/settings`)
       .then((res) => res.json())
       .then((data) => mounted && setSettings(data))
       .catch(console.error)
       .finally(() => mounted && setLoadingSettings(false));
 
-    fetch('http://localhost:5000/api/dishes/featured')
+    fetch(`${API_BASE}/api/dishes/featured`)
       .then((res) => res.json())
       .then((data) => mounted && setFeatured(Array.isArray(data) ? data : []))
       .catch(console.error)
